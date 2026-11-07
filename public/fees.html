@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Management | EduPay</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div class="app-layout">
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">S</div>
+            <div>
+                <h2>Ali</h2>
+                <span>School Administration</span>
+            </div>
+        </div>
+
+        <p class="nav-heading">MAIN MENU</p>
+        <nav class="navigation">
+            <a href="index.html" class="nav-link"><span>▦</span> Dashboard</a>
+            <a href="students.html" class="nav-link"><span>♙</span> Students</a>
+            <a href="fees.html" class="nav-link active"><span>▤</span> Fee Management</a>
+            <a href="payments.html" class="nav-link"><span>₹</span> Payments</a>
+            <a href="pending.html" class="nav-link"><span>◷</span> Pending Fees</a>
+            <a href="reports.html" class="nav-link"><span>▥</span> Fee Reports</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="admin-avatar">A</div>
+            <div><strong>Administrator</strong><small>School Admin</small></div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">FINANCE</p>
+                <h1>Fee Management</h1>
+                <p class="page-subtitle">Assign academic fees and manage student fee records.</p>
+            </div>
+            <a href="payments.html" class="btn btn-primary">Record Payment →</a>
+        </header>
+
+        <section class="content-card form-card">
+            <div class="card-heading">
+                <div>
+                    <h2>Assign New Fee</h2>
+                    <p>Create a fee record for a registered student</p>
+                </div>
+                <span class="form-tag">FEE ASSIGNMENT</span>
+            </div>
+
+            <form id="feeForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="feeStudent">Select Student *</label>
+                        <select id="feeStudent" required>
+                            <option value="">Select a student</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="academicyear">Academic Year *</label>
+                        <input type="text" id="academicyear" placeholder="Example: 2026-2027" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="feetype">Fee Type *</label>
+                        <select id="feetype" required>
+                            <option value="">Select fee type</option>
+                            <option value="Tuition Fee">Tuition Fee</option>
+                            <option value="Admission Fee">Admission Fee</option>
+                            <option value="Examination Fee">Examination Fee</option>
+                            <option value="Library Fee">Library Fee</option>
+                            <option value="Transport Fee">Transport Fee</option>
+                            <option value="Laboratory Fee">Laboratory Fee</option>
+                            <option value="Sports Fee">Sports Fee</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="totalamount">Total Amount (₹) *</label>
+                        <input type="number" id="totalamount" min="0.01" step="0.01" placeholder="Enter total amount" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="duedate">Due Date *</label>
+                        <input type="date" id="duedate" required>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="reset" class="btn btn-outline">Clear Form</button>
+                    <button type="submit" class="btn btn-primary">Assign Fee →</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="content-card table-card" style="margin-top: 25px;">
+            <div class="card-heading">
+                <div>
+                    <h2>Fee Records</h2>
+                    <p>All assigned fees and their payment balances</p>
+                </div>
+                <span class="count-label" id="feeCount">0 Records</span>
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fee ID</th>
+                            <th>Student</th>
+                            <th>Roll Number</th>
+                            <th>Fee Type</th>
+                            <th>Total Amount</th>
+                            <th>Paid</th>
+                            <th>Pending</th>
+                            <th>Due Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="feesTableBody">
+                        <tr>
+                            <td colspan="8" class="empty-cell">Loading fee records...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer class="footer">© 2026 EduPay · School Fee Payment Management System</footer>
+    </main>
+</div>
+</body>
+</html>

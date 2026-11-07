@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments | EduPay</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div class="app-layout">
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">S</div>
+            <div>
+                <h2>Ali</h2>
+                <span>School Administration</span>
+            </div>
+        </div>
+
+        <p class="nav-heading">MAIN MENU</p>
+        <nav class="navigation">
+            <a href="index.html" class="nav-link"><span>▦</span> Dashboard</a>
+            <a href="students.html" class="nav-link"><span>♙</span> Students</a>
+            <a href="fees.html" class="nav-link"><span>▤</span> Fee Management</a>
+            <a href="payments.html" class="nav-link active"><span>₹</span> Payments</a>
+            <a href="pending.html" class="nav-link"><span>◷</span> Pending Fees</a>
+            <a href="reports.html" class="nav-link"><span>▥</span> Fee Reports</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="admin-avatar">A</div>
+            <div><strong>Administrator</strong><small>School Admin</small></div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">TRANSACTIONS</p>
+                <h1>Fee Payments</h1>
+                <p class="page-subtitle">Record and audit student fee payment receipts.</p>
+            </div>
+        </header>
+
+        <section class="content-card form-card">
+            <div class="card-heading">
+                <div>
+                    <h2>Record New Payment</h2>
+                    <p>Enter the fee collection details and issue a receipt</p>
+                </div>
+                <span class="form-tag">RECORD PAYMENT</span>
+            </div>
+
+            <form id="paymentForm">
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="paymentFee">Select Assigned Fee Record *</label>
+                        <select id="paymentFee" required>
+                            <option value="">Select Fee Record</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="amountpaid">Amount Paid (₹) *</label>
+                        <input type="number" id="amountpaid" min="0.01" step="0.01" placeholder="Enter amount in ₹" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="paymentdate">Payment Date *</label>
+                        <input type="date" id="paymentdate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="paymentmethod">Payment Method *</label>
+                        <select id="paymentmethod" required>
+                            <option value="">Select Method</option>
+                            <option value="Cash">Cash</option>
+                            <option value="UPI">UPI</option>
+                            <option value="Card">Card</option>
+                            <option value="Bank Transfer">Bank Transfer</option>
+                            <option value="Cheque">Cheque</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="receiptno">Receipt Number *</label>
+                        <input type="text" id="receiptno" placeholder="e.g. REC-2026-001" required>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="reset" class="btn btn-outline">Clear Form</button>
+                    <button type="submit" class="btn btn-primary">Record Payment →</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="content-card table-card" style="margin-top: 25px;">
+            <div class="card-heading">
+                <div>
+                    <h2>Payment History</h2>
+                    <p>All recorded fee payments across all students</p>
+                </div>
+                <span class="count-label" id="paymentCount">0 Payments</span>
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Payment ID</th>
+                            <th>Student</th>
+                            <th>Fee Type</th>
+                            <th>Amount Paid</th>
+                            <th>Payment Date</th>
+                            <th>Method</th>
+                            <th>Receipt No.</th>
+                        </tr>
+                    </thead>
+                    <tbody id="paymentsTableBody">
+                        <tr>
+                            <td colspan="7" class="empty-cell">Loading payments...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer class="footer">© 2026 EduPay · School Fee Payment Management System</footer>
+    </main>
+</div>
+</body>
+</html>

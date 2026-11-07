@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | EduPay</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">S</div>
+                <div>
+                    <h2>Ali</h2>
+                    <span>School Administration</span>
+                </div>
+            </div>
+
+            <p class="nav-heading">MAIN MENU</p>
+            <nav class="navigation">
+                <a href="index.html" class="nav-link active"><span>▦</span> Dashboard</a>
+                <a href="students.html" class="nav-link"><span>♙</span> Students</a>
+                <a href="fees.html" class="nav-link"><span>▤</span> Fee Management</a>
+                <a href="payments.html" class="nav-link"><span>₹</span> Payments</a>
+                <a href="pending.html" class="nav-link"><span>◷</span> Pending Fees</a>
+                <a href="reports.html" class="nav-link"><span>▥</span> Fee Reports</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="admin-avatar">A</div>
+                <div><strong>Administrator</strong><small>School Admin</small></div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">OVERVIEW</p>
+                    <h1>Dashboard</h1>
+                    <p class="page-subtitle">Welcome back! Here's your school's fee summary.</p>
+                </div>
+                <div class="topbar-right">
+                    <span class="status-dot"></span>
+                    <span>System Online</span>
+                </div>
+            </header>
+
+            <section class="welcome-banner">
+                <div>
+                    <p class="banner-label">SCHOOL FEE MANAGEMENT</p>
+                    <h2>Manage fees. Track payments.<br>Stay organized.</h2>
+                    <p>Keep every student payment organized in one secure place.</p>
+                    <a href="fees.html" class="btn btn-light">Assign New Fee →</a>
+                </div>
+                <div class="banner-decoration">₹</div>
+            </section>
+
+            <section class="section-block">
+                <div class="section-heading">
+                    <div>
+                        <h2>Financial Overview</h2>
+                        <p>Summary of student fees and collections</p>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <article class="stat-card">
+                        <div class="stat-top"><span>Total Students</span><span class="stat-icon blue">♙</span></div>
+                        <h3 id="totalStudents">0</h3>
+                        <small>Registered students</small>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-top"><span>Total Fees</span><span class="stat-icon purple">₹</span></div>
+                        <h3 id="totalFees">₹0.00</h3>
+                        <small>Assigned fee amount</small>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-top"><span>Collected Fees</span><span class="stat-icon green">✓</span></div>
+                        <h3 id="collectedFees">₹0.00</h3>
+                        <small>Total payments received</small>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-top"><span>Pending Fees</span><span class="stat-icon orange">◷</span></div>
+                        <h3 id="pendingFees">₹0.00</h3>
+                        <small>Outstanding fee balance</small>
+                    </article>
+                </div>
+            </section>
+
+            <section class="dashboard-bottom">
+                <article class="content-card">
+                    <div class="card-heading">
+                        <div>
+                            <h2>Quick Actions</h2>
+                            <p>Frequently used operations</p>
+                        </div>
+                    </div>
+                    <div class="quick-actions">
+                        <a href="students.html" class="quick-action"><span>＋</span>
+                            <div><strong>Add Student</strong><small>Register a student</small></div><b>→</b>
+                        </a>
+                        <a href="fees.html" class="quick-action"><span>₹</span>
+                            <div><strong>Assign Fee</strong><small>Create a fee record</small></div><b>→</b>
+                        </a>
+                        <a href="payments.html" class="quick-action"><span>✓</span>
+                            <div><strong>Record Payment</strong><small>Enter a new payment</small></div><b>→</b>
+                        </a>
+                        <a href="reports.html" class="quick-action"><span>▥</span>
+                            <div><strong>View Reports</strong><small>Check student fee reports</small></div><b>→</b>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="content-card">
+                    <div class="card-heading">
+                        <div>
+                            <h2>Fee Monitoring</h2>
+                            <p>Keep track of outstanding balances</p>
+                        </div>
+                    </div>
+                    <div class="info-panel">
+                        <div class="info-symbol">₹</div>
+                        <h3>Stay on top of collections</h3>
+                        <p>Review pending payments and maintain accurate student fee records seamlessly.</p>
+                        <a href="pending.html" class="text-link">View Pending Fees →</a>
+                    </div>
+                </article>
+            </section>
+
+            <footer class="footer">© 2026 EduPay · School Fee Payment Management System</footer>
+        </main>
+    </div>
+</body>
+
+</html>

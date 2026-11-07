@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pending Fees | EduPay</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div class="app-layout">
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">S</div>
+            <div>
+                <h2>Ali</h2>
+                <span>School Administration</span>
+            </div>
+        </div>
+
+        <p class="nav-heading">MAIN MENU</p>
+        <nav class="navigation">
+            <a href="index.html" class="nav-link"><span>▦</span> Dashboard</a>
+            <a href="students.html" class="nav-link"><span>♙</span> Students</a>
+            <a href="fees.html" class="nav-link"><span>▤</span> Fee Management</a>
+            <a href="payments.html" class="nav-link"><span>₹</span> Payments</a>
+            <a href="pending.html" class="nav-link active"><span>◷</span> Pending Fees</a>
+            <a href="reports.html" class="nav-link"><span>▥</span> Fee Reports</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="admin-avatar">A</div>
+            <div><strong>Administrator</strong><small>School Admin</small></div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">MONITORING</p>
+                <h1>Pending Fees</h1>
+                <p class="page-subtitle">Track outstanding student fee balances and upcoming dues.</p>
+            </div>
+            <a href="payments.html" class="btn btn-primary">Record Payment →</a>
+        </header>
+
+        <section class="content-card table-card">
+            <div class="card-heading">
+                <div>
+                    <h2>Outstanding Fee Balances</h2>
+                    <p>All students with remaining unpaid fee balances</p>
+                </div>
+                <span class="count-label" id="pendingCount">0 Records</span>
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Student Name</th>
+                            <th>Class</th>
+                            <th>Roll Number</th>
+                            <th>Fee Type</th>
+                            <th>Total Fee</th>
+                            <th>Paid Amount</th>
+                            <th>Pending Balance</th>
+                            <th>Due Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pendingTableBody">
+                        <tr>
+                            <td colspan="9" class="empty-cell">Loading pending fees...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer class="footer">© 2026 EduPay · School Fee Payment Management System</footer>
+    </main>
+</div>
+</body>
+</html>
